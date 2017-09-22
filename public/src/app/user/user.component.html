@@ -1,0 +1,19 @@
+<h1>UserComponent</h1>
+{{ users | json}}
+
+<!-- C. put the name of the event in the child's tag-->
+<!-- NEXT: go to user.component.ts-->
+
+<app-user-new (createNewUserEvent)="create($event)"></app-user-new>
+
+<!-- [users] = "users" -->
+
+
+<!-- STEP2 put the child's tag on the parent's html -->
+<!-- NEXT: go to user-list.component.ts -->
+<app-user-list [users]="users" (destroyUserEvent)="destroy($event)"
+(updateUserEvent)="update($event)"></app-user-list>
+
+
+<!-- Delete Gamma: put the destroy user event tag from above -->
+<!-- NEXT: user.component.ts -->

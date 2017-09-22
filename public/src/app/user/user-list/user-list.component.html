@@ -1,0 +1,18 @@
+<p>
+  user-list works!
+</p>
+
+<!-- Step 4 print the info on the childs html page-->
+<div *ngFor="let user of users">
+  {{user.first_name}} - {{user.last_name}} - {{user.email}} 
+
+  <!-- THE Parent needs learn from the child that a user has been deleted -->
+  <!-- Delete Alpha: create the button to delete the user -->
+  <!-- NEXT: go to user-list.component.ts -->
+  <button (click)="destroy(user)">Destroy</button>
+
+
+  <button (click)="user.editable = !user.editable">Edit</button>
+  <app-user-edit [user]="user" (updateUserEvent)="update($event)" *ngIf ="user.editable"></app-user-edit>
+  
+</div>

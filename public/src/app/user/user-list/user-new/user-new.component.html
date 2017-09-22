@@ -1,0 +1,13 @@
+
+
+<!-- OUTPUT architecture start!!! -->
+<!-- We want user-new to send its info to its parent user-list -->
+<!-- A. create your form -->
+<!-- NEXT: go to user-new.ts -->
+<h3>This is the user new coponent</h3>
+<form (submit)="create()">
+First Name: <input type="text" name="first_name" [(ngModel)]="newUser.first_name">
+Last Name: <input type="text" name="last_name" [(ngModel)]="newUser.last_name">
+Email: <input type="text" name="email" [(ngModel)]="newUser.email">
+<input type="submit" name="add">
+</form>
